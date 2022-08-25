@@ -1,0 +1,9 @@
+-> For is Go's "while"
+
+	for sum < 1000 {
+		sum += sum
+	}
+
+-> Forever loop
+	for {
+	}

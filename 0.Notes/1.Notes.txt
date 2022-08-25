@@ -1,0 +1,4 @@
+While appending the capacity of new map is calculated by incrementing the value of the current cap by 1 and it is doubled.
+
+For eg. cap=12
+Check if (12+1)*2 works or not. If not (13+1)*2.

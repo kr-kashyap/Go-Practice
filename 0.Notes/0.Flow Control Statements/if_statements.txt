@@ -1,0 +1,7 @@
+-> If with a short statement
+
+	if v := math.Pow(x, n); v < lim {
+		return v
+	}
+
+Variables declared inside an if short statement are also available inside any of the else blocks. 

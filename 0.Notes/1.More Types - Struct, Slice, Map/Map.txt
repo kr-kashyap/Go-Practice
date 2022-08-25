@@ -1,6 +1,19 @@
--> Make new int slice of size N
+-> Initializing a Map
 
-var num = make([]int, N)
+	-> Initializing a Map using Make
+
+		mymap := make(map[string]int)
+
+	-> Initializing a Map with specific size N
+
+		mymap := make(map[string]int, N)
+
+	-> Literal 
+		
+		var m = map[string]int{}
+
+	var m map[string]int = map[string]int{"Foo": 20, "Bar": 30}
+
 
 -> Frequency Map of string characters
 
@@ -20,3 +33,8 @@ var num = make([]int, N)
             magmap[string(magazine[i])] = 1
         }
     }
+
+-> Iterating over a Map
+
+for key, element := range rnmap {
+	fmt.Printf("%s %d %d\n", key, magmap[key], element)

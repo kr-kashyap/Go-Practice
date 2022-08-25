@@ -1,0 +1,3 @@
+-> Make new int slice of size N
+
+	var num = make([]int, N)
