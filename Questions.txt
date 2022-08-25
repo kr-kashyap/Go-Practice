@@ -1,0 +1,6 @@
+Questions
+
+How to execute Two goroutines?
+x,y = y, x+y 
+case <- quit
+Use of methods??*

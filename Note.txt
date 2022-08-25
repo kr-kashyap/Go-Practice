@@ -1,0 +1,204 @@
+Logout Gmail
+Logout Github
+
+////////////////////////////////////////////////////////////////////////
+
+
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+
+export PATH=$PATH:/usr/local/go/bin
+
+go version
+
+ go install golang.org/x/website/tour@latest
+
+ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+
+GO_HOME=/usr/local/go/
+PATH=$PATH:$HOME/bin:$GO_HOME/bin
+export GO_HOME
+///////////////////////////////////////////////
+Loops & Func 8/14
+package main
+
+import (
+	"fmt"
+)
+
+func Sqrt(x float64) float64 {
+	z:=1.0
+	for i:=0;i<10;i++{
+		z -= (z*z - x) / (2*z)
+		fmt.Println(z)
+	}
+	return z
+}
+
+func main() {
+	fmt.Println(Sqrt(2))
+}
+//////////////////////////////////////////////
+
+Function value 24/27
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func main() {
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5, 12))
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
+}
+
+//////////////////////////////////////////////
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func main() {
+	v := Vertex{3, 4}
+	v.Scale(10)
+	fmt.Println(v.Abs())
+}
+/////////////////////////////////////////////////////
+/*Interface*/
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Abser interface {
+	Abs() float64
+}
+
+func main() {
+	var a Abser
+	f := MyFloat(-math.Sqrt2)
+	v := Vertex{3, 4}
+
+	a = f  // a MyFloat implements Abser
+	
+	// In the following line, v is a Vertex (not *Vertex)
+	// and does NOT implement Abser.
+	//a = v
+
+	fmt.Println(a.Abs())
+	
+	a = &v // a *Vertex implements Abser
+
+	fmt.Println(a.Abs())
+}
+
+type MyFloat float64
+
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v *Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+////////////////////////////////////////////////////////////
+
+A type implements an interface by implementing its methods. There is no 
+explicit declaration of intent, no "implements" keyword. 
+
+///////////////////////////////////////////////////////////////
+/* Interface */
+package main
+
+import "fmt"
+
+type I interface {
+	M()
+}
+
+type S string
+
+// This method means type T implements the interface I,
+// but we don't need to explicitly declare that it does so.
+func (t S) M() {
+	fmt.Println(t)
+}
+
+func main() {
+	//var i I = S("hello")
+	S("hello").M()
+}
+/////////////////////////////////////////////////////////////
+
+/*Interface values with nil underlying values*/
+
+	var i I
+
+	var t *T
+	i = t
+	describe(i)
+/////////////////////////////////////////////////////////////
+
+/*
+	Nil interface values
+
+	A nil interface value holds neither value nor concrete type.
+
+	Calling a method on a nil interface is a run-time error
+*/
+
+	var i I
+	describe(i)
+
+/////////////////////////////////////////////////////////////
+
+//Empty Interface
+
+	The interface type that specifies zero methods is known as the empty interface:
+
+
+	interface{}
+
+/////////////////////////////////////////////////////////////
+
+The only difference between sprintf() and printf() is that sprintf() 
+writes data into a character array, while printf() writes data to stdout,
+the standard output device.
+
+/////////////////////////////////////////////////////////////

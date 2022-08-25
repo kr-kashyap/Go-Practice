@@ -1,0 +1,7 @@
+https://www.geeksforgeeks.org/structures-in-golang/
+https://go.dev/play/p/OKtCFskbp2t
+https://go.dev/blog/slices-intro
+https://go.dev/tour/moretypes/15
+https://go.dev/play/
+https://go.dev/tour/moretypes/1
+https://go.dev/tour/concurrency/4
