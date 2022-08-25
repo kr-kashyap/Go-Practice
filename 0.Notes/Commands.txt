@@ -1,0 +1,22 @@
+-> Make new int slice of size N
+
+var num = make([]int, N)
+
+-> Frequency Map of string characters
+
+	/*
+		Steps:
+			1) Make a map using "make".
+			2) Check if the element is present in the map or not. 
+				a) If present increment the value.
+				b) Else initialize the value to 1.
+	*/
+
+	magmap := make(map[string]int)
+    for i=0; i<len(magazine); i++ {
+        if _, ok := magmap[string(magazine[i])]; ok == true {
+            magmap[string(magazine[i])] += 1 
+        } else {
+            magmap[string(magazine[i])] = 1
+        }
+    }
