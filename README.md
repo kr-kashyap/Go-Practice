@@ -1,2 +1,2 @@
-# Go_Practice
+# Go-Practice
  My go practice codes
