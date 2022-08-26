@@ -1,0 +1,40 @@
+-> Goroutines
+
+	The child thread will always be terminated when the main thread is terminated. So the child thread is executed at max n times. Like sleep for 5 times. So it will be executed at max 5 times.The output will keep on varying because of the context switches.
+
+	[Refer to Goroutines_1_11 on Go Tour].
+
+c (variable of type chan int) permits only one iteration variable
+
+-> Channels
+
+	It is a means to communicate among Goroutines.
+
+	<-c //Will fetch the value from the channel
+
+	c <- 0 // Will put value to the channel
+
+-> Buffered channels	
+	-> ** Here be careful for overflow condition. Check the buffered_channels.go program. I have used if else to check for the overflow using len and cap comparison.
+
+https://stackoverflow.com/questions/54413564/whats-the-difference-between-var-a-chan-int-and-a-makechan-int
+
+
+	Recall that var name type creates a variable named name of type type set to the default value for that type. This means that var a chan int creates a channel such that a == nil.
+
+	var a chan int = make(chan int) and a := make(chan int) are, however, the same.
+
+-> Select
+	
+	The select statement lets a goroutine wait on multiple communication operations.
+
+	A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready. 
+
+->  What is Tick and After?
+	Tick repeats it at X intervals of time.
+	After waits for x intervals of time.
+	In here even if we use tick / after for Boom it does not matter coz we have return statement in the select of Boom.
+
+-> Range and Close & Select
+
+	Either we can use close(c) or we can use second channel to quit like whenever we get input on the quit channel we will print the quit message and return. [Refer go tour 4 & 5 from concurrency.] 

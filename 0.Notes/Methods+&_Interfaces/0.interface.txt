@@ -1,0 +1,16 @@
+** For implementing interface functions we NEED to make use of methods.
+
+-> var i I // Creates a nil interace
+-----> Calling a method M() on Nil interface is a RUNTIME Error.
+-> var i1 interface{} // Empty Interface
+-----> An empty interface may hold values of any type. (Every type implements at least zero methods).
+
+type F float64
+i = F(3.14) // Interface on a float64 of Type F.
+// Here for in-built type redclare them as a new type. Nd use NEW_NAME( VAL ).
+
+type T struct {
+	s String
+}
+i = T{\"hello\"} // Interface on a Struct.
+// For Structs use STRUCT_NAME{ VAL }
