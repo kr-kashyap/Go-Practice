@@ -35,7 +35,7 @@ func (c *SafeCounter) Value(key string) int {
 	return temp
 }
 
-func main() {
+func syncMutex_9_11() {
 	c := SafeCounter{v: make(map[string]int)}
 	for i := 0; i < 1000; i++ {
 		go c.Inc("somekey")

@@ -12,7 +12,7 @@ func sum(s []int, c chan int) {
 	c <- sum // send sum to c
 }
 
-func main() {
+func channels_2_11() {
 	s := []int{7, 2, 8, -9, 4, 0, 1}
 
 	c := make(chan int)
