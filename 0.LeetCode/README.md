@@ -3,17 +3,22 @@
 [![Connect on LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&style=social)](https://www.linkedin.com/in/kashyap-nirmal/) 
 [![Connect on Gmail](https://img.shields.io/badge/--Gmail?label=Gmail&logo=Gmail&style=social)](mailto:kashyap.n@knackroot.com)
 ![Last Commit](https://img.shields.io/github/last-commit/kr-kashyap/Go-Practice?style=plastic)
-
+<br>
+<img src="https://forthebadge.com/images/badges/for-you.svg" />
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="http://ForTheBadge.com/images/badges/made-with-go.svg" />
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=100&section=header&text=👉%20LeetCode%20Go%20Practice%20👈&fontSize=50&fontAlignY=70" /> 
 </p>
 
 ## Technology stack
-- Go
+- **Go**
 
 ## Introduction
 
-This directory contains solutions to LeetCode problems performed in Go. I am also mentioning the Go concepts used in these problems along with the basic syntax. 
+- This directory contains solutions to LeetCode problems performed in **Go**. 
+- I am also mentioning the Go concepts used in these problems along with the basic syntax. 
+- I will be adding the solutions eventually as I go on.
 
 Duration ` Aug 2022 - Present `
 
