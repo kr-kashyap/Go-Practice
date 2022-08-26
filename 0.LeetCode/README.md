@@ -1,6 +1,8 @@
 [![Hello programmer Welcome](https://img.shields.io/badge/Hello,Programmer!-Welcome-orange.svg?style=flat&logo=github)](https://github.com/kr-kashyap/)
+![Lines of code](https://img.shields.io/tokei/lines/github/kr-kashyap/Go-Practice?style=plastic)
 [![Connect on LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&style=social)](https://www.linkedin.com/in/kashyap-nirmal/) 
 [![Connect on Gmail](https://img.shields.io/badge/--Gmail?label=Gmail&logo=Gmail&style=social)](mailto:kashyap.n@knackroot.com)
+![Last Commit](https://img.shields.io/github/last-commit/kr-kashyap/Go-Practice?style=plastic)
 
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=100&section=header&text=👉%20LeetCode%20Go%20Practice%20👈&fontSize=50&fontAlignY=70" /> 
