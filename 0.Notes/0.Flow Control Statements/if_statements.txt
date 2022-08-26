@@ -5,3 +5,5 @@
 	}
 
 Variables declared inside an if short statement are also available inside any of the else blocks. 
+
+Note scope of the variable declared inside the if block is limited to the block itself.
