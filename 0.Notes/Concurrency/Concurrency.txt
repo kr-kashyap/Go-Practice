@@ -4,15 +4,19 @@
 
 	[Refer to Goroutines_1_11 on Go Tour].
 
-c (variable of type chan int) permits only one iteration variable
-
 -> Channels
 
 	It is a means to communicate among Goroutines.
 
+	//Empty channel
+	c := make(chan int)
+
 	<-c //Will fetch the value from the channel
 
 	c <- 0 // Will put value to the channel
+
+	** c (variable of type chan int) permits only one iteration variable
+
 
 -> Buffered channels	
 	-> ** Here be careful for overflow condition. Check the buffered_channels.go program. I have used if else to check for the overflow using len and cap comparison.
