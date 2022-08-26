@@ -1,3 +1,11 @@
+-> Nil slice
+
+	var nums []int
+
 -> Make new int slice of size N
 
 	var num = make([]int, N)
+
+-> Append to a slice
+	
+	nums = append(nums , temp.Val) 

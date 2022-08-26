@@ -28,3 +28,7 @@ Check if (12+1)*2 works or not. If not (13+1)*2.
 		Lat, Long float64
 	}
 	arr := []Vertex{}	
+
+-> Scope of variables in If else blocks
+	
+	Variables declared inside if, or declared in the short statement has its scope till the if-else block.
