@@ -66,3 +66,8 @@ Check if (12+1)*2 works or not. If not (13+1)*2.
 	/*
 		Here closure is used to protect sum. If closure is not there, it would be a global variable and anyone can modify it.
 	*/
+
+-> String to Int
+
+	import "strconv"
+	strconv.Itoa(i) // i int
