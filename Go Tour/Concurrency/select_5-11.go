@@ -1,37 +1,45 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-func fibonacci(c, quit chan int) {
-	x, y := 0, 1
-	for {
+func print_i0(c chan int) {
+	for i := 0; i <= cap(c); i++ {
 		select {
-		case c <- x:
-			x, y = y, x+y
-		case <-quit:
-			fmt.Println("quit")
-			return
+		case c <- i:
+			i = i
 		}
 	}
 }
 
 func select_5_11() {
-	c := make(chan int)
-	d := make(chan int)
-	quit := make(chan int)
-	//quit1 := make(chan int)
+	fmt.Println("\n--> Select 1 <--\n")
+	select_5_11_1()
+	c := make(chan int, 25)
+	d := make(chan int, 25)
 	go func() {
-		for i := 0; i < 10; i++ {
-			fmt.Println(<-c)
+		for i := 0; i < 5; i++ {
+			time.Sleep(50 * time.Millisecond)
+			fmt.Printf("C: %d\n", <-c)
 		}
-		quit <- 0
 	}()
 	go func() {
-		for i := 0; i < 10; i++ {
+		for i := 0; i < 5; i++ {
 			fmt.Printf("D: %d\n", <-d)
 		}
-		quit <- 0
 	}()
-	fibonacci(c, quit)
-	fibonacci(d, quit)
+	print_i0(c)
+	print_i0(d)
 }
+
+/*
+	Use of an Anonymous function in Goroutines.
+
+	The select statement lets a goroutine wait on multiple communication operations.
+
+	? A select blocks until one of its cases can run, then it executes that case. It chooses one at random if
+	multiple are ready. ?
+
+*/

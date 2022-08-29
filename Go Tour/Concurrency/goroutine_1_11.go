@@ -16,7 +16,7 @@ func goroutine_1_11() {
 	go say("world")
 	go say("hello")
 	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
+		time.Sleep(50 * time.Millisecond)
 		fmt.Printf("goroutine(). %d\n", i)
 	}
 }
