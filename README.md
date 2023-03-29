@@ -33,7 +33,7 @@
 
 <br>
 
-Duration ` Aug 2022 - Present `
+Duration ` 25 Aug 2022 - 29 Aug 2022 `
 
 ## Creator 
 [`Kashyap Nirmal`](https://github.com/kr-kashyap/)
